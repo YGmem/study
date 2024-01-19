@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+   <a href="https://element.eleme.cn/#/zh-CN/component/tabs?sessionData=${sessionStorage.getItem('sessionData')}">回到上一页</a>
+
+  <script>
+    async function async1() {
+      await async2()
+      console.log(1)
+    }
+    async function async2() {
+      console.log(2)
+      return Promise.resolve().then(() => {
+        console.log(3)
+      })
+    }
+    async1()
+
+    setTimeout(function () {
+      console.log(4)
+    }, 0)
+    new Promise(resolve => {
+      resolve()
+    }).then(function () {
+      console.log(5)
+    }).then(function () {
+      console.log(6)
+    }).then(function () {
+      console.log(7)
+    })
+
+
+
+  </script>
+
+</body>
+
+</html>

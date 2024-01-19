@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html {
+      font-size: 100px;
+    }
+
+    .app {
+      /* font-size: 100px; */
+      /* currentColor 获取当前颜色 */
+      border: 0.1em solid currentColor;
+      color: red;
+      border-radius: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app" class="app">1</div>
+
+  <script>
+    var root = document.documentElement // <html> 
+    if ('borderRadius' in root.style) { // ie 8 不支持
+      root.classList.add('borderRadius')
+      console.log(11)
+    }
+    else {
+      console.log(22)
+      root.classList.add('no-borderRadius')
+    }
+
+    console.log(root);
+
+  </script>
+
+</body>
+
+</html>

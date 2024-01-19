@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    // async function async() {
+    //   console.log(2)
+    //   await console.log(3)
+    //   // await Promise.resolve().then(() => {
+    //   //  console.log(3);
+    //   // });
+    //   console.log(4)
+    // }
+    // setTimeout(() => {
+    //   console.log(5)
+    //   Promise.resolve().then(() => {
+    //     console.log(11)
+    //   })
+    // })
+    // setTimeout(() => {
+    //   console.log(10)
+    // })
+    // const promise = new Promise((resolve, reject) => {
+    //   console.log(6)
+    //   resolve(7)
+    // })
+    // promise.then((res) => {
+    //   console.log(res)
+    // })
+    // async()
+    // console.log(8)
+
+    Promise.resolve().then(() => {
+      console.log(0)  //1
+      return Promise.resolve(4)
+    }).then((res) => {
+      console.log(res)
+    })
+
+    Promise.resolve().then(() => {
+      console.log(1) //2
+
+    }).then(() => {
+
+      console.log(2)
+    }).then(() => {
+
+      console.log(3)
+    }).then(() => {
+
+      console.log(5)
+    }).then(() => {
+
+      console.log(6)
+    })
+
+  </script>
+</body>
+
+</html>

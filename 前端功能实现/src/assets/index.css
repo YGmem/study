@@ -1,0 +1,10 @@
+body,
+html,
+#app{
+  margin: 0;
+  padding: 0;
+  /* filter: grayscale(100%) !important; */ /* 将项目整体色调全部变成灰色 */
+}
+
+
+

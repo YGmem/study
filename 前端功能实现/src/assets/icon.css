@@ -1,0 +1,33 @@
+/*
+ 1 从阿里巴巴图标库（https://www.iconfont.cn/） 选择需要的图标添加到自己定义的项目
+ 2 在找到该项目查看在线链接复制到下方
+ 3 .icon-info::before{
+  content: '\e67c';
+  } 
+  前面的icon-info 自己定义 content 里面的内容是项目中点击该图标右上角下面的Unicode（16 进制）里面的东西复制上去即可
+  4 页面引入使用 :
+ */
+
+@font-face {
+  font-family: 'iconfont';  /* Project id 3730899 */
+  src: url('//at.alicdn.com/t/c/font_3730899_yqt2hx3jq6i.woff2?t=1666790072839') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3730899_yqt2hx3jq6i.woff?t=1666790072839') format('woff'),
+       url('//at.alicdn.com/t/c/font_3730899_yqt2hx3jq6i.ttf?t=1666790072839') format('truetype');
+}
+
+
+
+.iconfont{
+  font-family: 'iconfont';
+  font-style: normal;
+  color: red;
+  font-size: 30px;
+}
+
+.icon-info::before{
+  content: '\e67c';
+}
+
+.icon-xing::before{
+  content: '\e613';
+}
