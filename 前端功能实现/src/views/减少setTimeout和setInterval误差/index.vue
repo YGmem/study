@@ -1,17 +1,22 @@
 <template>
   <div>
+
     误差{{ error }}
     <el-button type="primary" @click="handlerTime"
       >点击我触发定时器(等2秒)</el-button
     >
+
+  <!-- <div>{{ html }}</div> -->
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref, reactive, defineComponent, h } from 'vue'
 
 const error = ref(0)
 const delay = 2000
+
 
 const handlerTime = () => {
   const start = new Date().getTime()
@@ -29,6 +34,8 @@ const handlerTime = () => {
     const element = i
   }
 }
+
+
 
 function timer (): void {
   const speed = 500
@@ -55,4 +62,7 @@ function timer (): void {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style lang="less">
+
+
+</style>

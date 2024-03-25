@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, provide, onMounted } from 'vue'
+import { ref, provide, onMounted } from 'vue'
 import MyInput from '@/components/MyInput.vue'
 
 const aaa = ref(1222)

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    async function prompt() {
+      console.log(0)
+      await Promise.resolve()
+      console.log(1)
+    }
+    setTimeout(() => {
+      console.log(2)
+      Promise.resolve().then(() => {
+        console.log(3)
+      })
+    }
+    )
+
+    setTimeout(() => {
+      console.log(4)
+      Promise.resolve().then(() => { console.log(5) })
+    })
+    Promise.resolve().then(() => { console.log(6) })
+    Promise.resolve().then(() => { console.log(7) })
+    Promise.resolve().then(() => { console.log(8) })
+    Promise.resolve().then(() => {
+      console.log(9)
+    })
+    prompt()
+    console.log("start")
+  </script>
+
+</body>
+
+</html>

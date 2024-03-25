@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref,defineComponent } from "vue";
+import { ref,defineComponent ,defineExpose} from "vue";
 
 let columns = ref([
   {
@@ -39,6 +39,11 @@ let dataSource = ref([
   },
   // 其他数据...
 ])
+
+
+defineExpose({
+  columns
+})
 </script>
 
 <style scoped>

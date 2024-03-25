@@ -8,7 +8,7 @@ export const htmlToPDF = async (htmlId: string, title: string = '报表', bgColo
   }
   const A4Width = 595.28
   const A4Height = 841.89
-  const canvas = await html2canvas(pdfDom, {
+  const canvas = await html2canvas(pdfDom as unknown as HTMLElement, {
     scale: 2,
     useCORS: true,
     backgroundColor: bgColor

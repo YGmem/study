@@ -27,16 +27,12 @@
 import { ref, reactive } from 'vue'
 import { htmlToPDF } from './index'
 
-
-let pdf = ()=>{
-  htmlToPDF('pdf','test pdf')
+const pdf = () => {
+  htmlToPDF('pdf', 'test pdf')
 }
-
-
 
 </script>
 
 <style scoped lang='less'>
 
 </style>
-
