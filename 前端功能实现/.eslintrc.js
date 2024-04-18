@@ -24,6 +24,8 @@ module.exports = {
             }
         }
     ],
+    'space-before-function-paren': 0,
+    arrowParens: 'avoid',
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",

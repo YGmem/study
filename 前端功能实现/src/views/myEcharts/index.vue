@@ -12,9 +12,8 @@ import * as echarts from 'echarts'
 onMounted(() => {
   const chartDom = document.getElementById('funnelChart')
   const myChart = echarts.init(chartDom)
-  let option
 
-  option = {
+ const option = {
     series: [
       {
         type: 'funnel',
@@ -123,7 +122,7 @@ onMounted(() => {
   //   ]
   // };
 
-  option && myChart.setOption(option)
+  myChart.setOption(option)
 })
 
 </script>

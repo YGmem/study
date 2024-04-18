@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive,toRefs,toRef } from "vue";
+import { reactive, toRefs, toRef } from "vue";
 
 function useCount() {
   const state = reactive({
@@ -21,10 +21,19 @@ function useCount() {
   }
 
   return {
-    state:toRefs(state),
+    state: toRefs(state),
     update,
   };
 }
+const state = reactive({
+  user: {
+    name: "John",
+    age: 30,
+  },
+});
+const { user } = state;
+user.name = "Jane2";
+console.log(user, state);
 
 // 确保解构不丢失响应性
 const {

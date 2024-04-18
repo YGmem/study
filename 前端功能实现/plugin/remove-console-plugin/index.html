@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="item">列表元素</div>
+    <div class="item">列表元素</div>
+    <div class="item">列表元素</div>
+  </div>
+  <button>删除</button>
+  <script>
+    const fr = new FinalizationRegistry((value) => {
+      console.log(`${value}于 ${new Date().getTime()} 被垃圾回收掉了~`)
+    })
+    let mainEl = document.querySelector(".main")
+    let btnEl = document.querySelector("button")
+    fr.register(mainEl, "mainEl")
+    const removeMainEl = () => {
+      mainEl.removeEventListener("click", removeMainEl)
+      mainEl.remove()
+      mainEl = null
+      // 疯狂扩展内存，激活V8的GC
+      function allocateMemory() {
+        Array.from({ length: 50000 }, () => () => { })
+        setInterval(allocateMemory, 1000); console.log("V8:累死我了，数组添加成功~")
+      }
+
+      allocateMemory()
+    }
+    mainEl.addEventListener("click", removeMainEl)
+    btnEl.addEventListener("click", removeMainEl);
+  </script>
+</body>
+
+</html>

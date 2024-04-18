@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function test(obj, key) {
+      let val = obj[key]
+      return function () {
+        console.log('val: ', val)
+        val = 2
+      }
+    }
+    let obj = { a: { b: 1 } }
+    test(obj, 'a')()
+    console.log('obj: ', obj)
+  </script>
+</body>
+
+</html>

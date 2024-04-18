@@ -7,7 +7,7 @@
     >
       <el-menu-item
         :index="menu.path"
-        v-for="(menu, index) in myRouter"
+        v-for="(menu) in myRouter"
         :key="menu.name"
       >
         <template #title>
@@ -19,8 +19,8 @@
 </template>
 
 <script setup lang='ts'>
-import { ref, reactive } from "vue";
-import { myRouter } from "@/router/router.config";
+import { ref, reactive } from 'vue'
+import { myRouter } from '@/router/router.config' 
 </script>
 
 <style scoped>
