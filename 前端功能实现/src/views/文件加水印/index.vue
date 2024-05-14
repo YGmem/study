@@ -2,7 +2,7 @@
   <div>
     <div> 
     <a :href="pdf">pdf</a>
-    <div>测试</div>
+    <div>测试1111</div>
   </div>
     <div> 
       <a href="/src/assets/file/1).pdf">pdf2</a>
