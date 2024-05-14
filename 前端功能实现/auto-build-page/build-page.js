@@ -31,7 +31,7 @@ function buildPage(config) {
     // 写入文件
     writeF(paths + '/index.vue', str)
     // shell.echo('开始新增路由……')
-    addRou(`./views/${config.filePath}/index.vue`, config)
+    addRou(`./views/${config.filePath}/${config.name}`, config)
   })
 }
 

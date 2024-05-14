@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp} from 'vue'
 import App from './App.vue'
 import Antd from 'ant-design-vue'
 import router from './router/index'
@@ -8,9 +8,6 @@ import './assets/icon.css' // 引入icon
 import directive from '@/directive/index'
 import { createPinia } from 'pinia'
 
-/* 禁止打开工作台 */
-// import '@/utils/禁止打开工作台/index'
-
 import F from './views/副作用.vue'
 import '@/api/version'
 
@@ -18,10 +15,10 @@ import 'virtual:windi.css'
 import 'virtual:windi-devtools'
 
 // 在主入口监听PWA注册事件 pwa就是可以将网页当成app进行安装使用大小也很小
-// window.addEventListener('beforeinstallprompt', (e) => {
-//   e.preventDefault()
-//   window.deferredPrompt = e
-// })
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault()
+  window.deferredPrompt = e
+})
 
 const app = createApp(App)
 
