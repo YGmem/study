@@ -25,7 +25,7 @@
       </template>
     </draggable>
     <table-m ref="table"></table-m>
-    {{ obj2 }}{{ obj }}
+    {{ obj2 }}{{ obj }} 1
   </div>
 </template>
 
@@ -39,6 +39,7 @@ import TableM from '../components/TableM.vue'
 // 导入draggable组件
 import draggable from 'vuedraggable'
 import type test from './test.vue'
+import {isMobile} from '../utils/utils'
 
 type MyComponentInstance = InstanceType <typeof test>
 
@@ -46,13 +47,14 @@ type MyComponentInstance = InstanceType <typeof test>
 
 const aaa: MyComponentPropsType = { name: 'aa', age: 111, email: '11' }
 
+console.log('是否是手机',isMobile());
 
 const red = ref({
   red: true
 })
 
 const table = ref()
-console.log(table.value.columns)
+// console.log(table.value.columns)
 
 interface TreeNode {
   name: string

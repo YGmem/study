@@ -17,9 +17,9 @@ var addConfig = [
   {
     open: true,
     helloworld: true,
-    routerPath: "/functionBtn",
-    filePath: '/函数式组件封装按钮',
-    name: '函数式组件封装',
+    routerPath: "/fileAddWater",
+    filePath: '文件加水印',
+    name: '文件加水印',
   },
 ]
 
