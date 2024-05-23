@@ -1,6 +1,5 @@
 <template>
 <div> 
-
   <virtual-list :item-data="myData">
    <template #item="{ item,index }">
     {{ item}} {{ index }}
